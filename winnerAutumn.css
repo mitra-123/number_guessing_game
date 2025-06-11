@@ -1,0 +1,59 @@
+body {
+
+    background-image: url('autumnBts.jpg');
+    
+    
+    background-attachment: fixed;
+    font-family: 'Nimbus Sans L', Arial, sans-serif;
+    text-align: center;
+    
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+    max-width: 80%;
+    color: white;
+    font-size: 100px;
+    margin: 0 auto; 
+    text-shadow: 3px 3px 3px #000; 
+}
+
+
+h1 {
+    text-align: center;
+    max-width: 80%;
+    color: white;
+    font-size: 100px;
+    margin: 0 auto; 
+    text-shadow: 3px 3px 3px #000;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #e0b45d; 
+    padding: 20px;
+}
+
+
+li {
+    display: inline; 
+    margin-right: 15px; 
+}
+
+
+a {
+    text-decoration: none; 
+    color: #ecf0f1; 
+    font-weight: bold; 
+}
+
+a:hover {
+    color: #bdc3c7; 
+}

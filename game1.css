@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #0766a4; 
+    padding: 20px;
+    width: 100%;
+}
+.column1 {
+    flex: 1; /* Make the main content flexible to take up remaining space */
+}
+
+li {
+    display: inline; 
+    margin-right: 15px; 
+}
+
+
+a {
+    text-decoration: none; 
+    color: #ecf0f1; 
+    font-weight: bold; 
+}
+
+a:hover {
+    color: #bdc3c7; 
+}
+
+body {
+    font-family: 'Nimbus Sans L', Arial, sans-serif;
+    text-align: center;
+    color: #212121;
+    background-image: url("aqua.jpg"); 
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; 
+    
+}
+
+div {
+    border-radius: 5px;
+    margin: 20px;
+}
+
+p {
+    padding: 5px;
+}
+
+strong {
+    font-family: 'Nimbus Sans L', Arial, sans-serif;
+    font-size: 1.2em;
+    color: #27ae60; 
+    font-weight: bold; 
+}
+
+footer {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #4ba3a9; 
+    background-color: #0766a4; 
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+#guessButton, #hint {
+    cursor: pointer; 
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #9b59b6; 
+}
+
+#N {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #bdc3c7; 
+    border-radius: 5px; 
+}
+
+#output, #output2, #hintText {
+    color: #3498db; 
+}
+
+
+
+[class*="column"] {
+    width: 80%;
+    display: inline-block;
+    height: auto; 
+    font-size: 1.5em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center; 
+}
+
+@media screen and (min-width: 600px) {
+    [class*="column"] {
+        width: 50%;
+    }
+}
+
+h2{
+    color: #11c1ce;
+}
+.themeButton{
+    background-color: #11c1ce;
+    font-family: 'Nimbus Sans L', Arial, sans-serif;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    width: 150px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.themeBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start (top) of the container */
+}
+
+.themeIMG {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px; /* Adjusted margin for spacing */
+}

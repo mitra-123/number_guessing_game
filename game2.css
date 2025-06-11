@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #dba634; 
+    padding: 20px;
+    width: 100%;
+}
+.column1 {
+    flex: 1; /* Make the main content flexible to take up remaining space */
+}
+
+li {
+    display: inline; 
+    margin-right: 15px; 
+}
+
+
+a {
+    text-decoration: none; 
+    color: #ecf0f1; 
+    font-weight: bold; 
+}
+
+a:hover {
+    color: #bdc3c7; 
+}
+
+body {
+    font-family: cursive;
+    text-align: center;
+    color: #212121;
+    background-image: url("autumn.jpeg"); 
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; 
+}
+
+div {
+    border-radius: 5px;
+    margin: 20px;
+}
+
+p {
+    padding: 5px;
+}
+
+strong {
+    font-family:cursive;
+    font-size: 1.2em;
+    color: #27ae60; 
+    font-weight: bold; 
+}
+
+footer {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #303d98; 
+    background-color: #7b5824; 
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+#guessButton, #hint {
+    cursor: pointer; 
+    border: solid;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-family: cursive;
+    background-color: #ce9211; 
+}
+
+#N {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid #ddc871; 
+    border-radius: 25px; 
+}
+
+#output, #output2, #hintText {
+    color: orange; 
+}
+
+
+
+[class*="column"] {
+    width: 80%;
+    display: inline-block;
+    height: auto; 
+    font-size: 1.5em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center; 
+}
+
+@media screen and (min-width: 600px) {
+    [class*="column"] {
+        width: 50%;
+    }
+}
+h2{
+    color: orange;
+}
+.themeButton{
+    background-color: #ce9211;
+    font-family: cursive;
+    border-radius: 15px;
+    padding: 10%;
+    border: solid;
+    color: white;
+    width: 150px;
+}
+.themeBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start (top) of the container */
+}
+
+.themeIMG {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px; /* Adjusted margin for spacing */
+}

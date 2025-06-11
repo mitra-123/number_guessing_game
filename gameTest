@@ -1,0 +1,149 @@
+var outputObj = document.getElementById("output");
+var outputObj2 = document.getElementById("output2");
+var outputObj3 = document.getElementById("hintText");
+var rand;
+var numGuesses;
+var maxNum;
+var user;
+var guess;
+var count =0;
+var themeNum=1;
+
+function start(){
+    window.location.href = 'game.html';
+}
+
+function instructions(){
+    window.location.href = 'instructions.html';
+}
+
+
+function initialize() {
+   var status = true;
+    while (status) {
+        user = prompt("What is your name");
+
+        if (user !== null && user.trim() !== "") {
+            status = false;
+        }
+        else{
+            alert("Please input a username!");
+        }
+    }
+    
+    status = true;
+    while (status) {
+        numGuesses = parseInt(prompt("How many guesses do you want?"));
+
+        if (numGuesses !== null && !isNaN(numGuesses)) {
+            status = false;
+        }
+        else{
+            alert("Please input a number!");
+        }
+    }
+
+    status = true;
+    while (status) {
+        maxNum = parseInt(prompt("What is the max number you want to guess up until (1-x)?"));
+
+        if (maxNum !== null && !isNaN(maxNum)) {
+            status = false;
+        }
+        else{
+            alert("Please input a number!");
+        }
+    }
+    rand = randomNum(parseInt(maxNum));
+    outputObj2.innerHTML = "You have "+numGuesses+ " guesses left!";
+    document.getElementById('output').textContent = "Welcome "+user+"!";
+}
+
+function userGuess() {
+
+    count +=1
+    if (count==1){
+        outputObj3.innerHTML ="";
+    }
+    guess = parseInt(document.getElementById("N").value);
+    numGuesses -=1;
+    if(guess<0||guess>maxNum){
+        document.getElementById('output').textContent = "Please put a number in range!";
+        document.getElementById('output').style.color = '#FFC0CB'; 
+        numGuesses +=1;
+    }
+    else if(numGuesses===0){
+        alert("You Lost! The number was "+rand);
+        if (themeNum=1){
+            window.open("loserSea.html", "_blank");
+        }
+        else if(themeNum =2){
+            window.open("loserSea.html", "_blank");
+        //MAKE OTHER 2 LOSING SCREENS AND INSERT
+        }
+        else if(themeNum=3){
+            window.open("loserSea.html", "_blank");
+        //MAKE OTHER 2 LOSING SCREENS AND INSERT
+        }
+        //insert functoiin that takes user to losing page based on which theme is selected;
+    }
+    else if (guess===rand){
+        alert("Correct!!");
+        if (themeNum=1){
+            window.open("loserSea.html", "_blank");
+        }
+        else if(themeNum =2){
+            window.open("winnerAutumn.html", "_blank");
+        //MAKE OTHER 2 LOSING SCREENS AND INSERT
+        }
+        else if(themeNum=3){
+            window.open("winnerMagic.html", "_blank");
+        //MAKE OTHER 2 LOSING SCREENS AND INSERT
+        }
+         //insert functoiin that takes user to losing page based on which theme is selected;
+    }
+    else{
+        document.getElementById('output').textContent = "Incorrect!";
+        document.getElementById('output').style.color = '#e74c3c'; 
+    }
+    
+    outputObj2.innerHTML = "You have "+numGuesses+" guesses left";
+}
+
+function randomNum(num) {
+    rand = Math.floor(Math.random() * num)+1; 
+    return rand
+}
+
+function hint() {
+    count =0;
+    numGuesses -=1;
+    if (guess > rand) {
+        outputObj3.innerHTML = "Your last guess is bigger than the number I have";
+    }
+    else{
+        outputObj3.innerHTML = "Your last guess is lower than the number I have";
+    }
+    outputObj2.innerHTML = "You have "+numGuesses+" left";
+}
+function theme(n){
+    if(n==1){
+        themeNum=1;
+        document.getElementById('theme').href='game1.css';
+        document.getElementById('nameOfGame').innerHTML='🪼🌊GUESS THE NUMBER🌊🪼';
+        
+    }
+    if(n==2){
+        themeNum =2;
+        document.getElementById('theme').href='game2.css';
+        document.getElementById('nameOfGame').innerHTML='🍁🍂GUESS THE NUMBER🍂🍁';
+        
+    }
+    if(n==3){
+        themeNum=3;
+        document.getElementById('theme').href='game3.css';
+        document.getElementById('nameOfGame').innerHTML='⋆˖⁺‧₊☽GUESS THE NUMBER☾₊‧⁺˖⋆';
+        
+    }
+
+}

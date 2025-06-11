@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Game</title>
+  <link id ="theme" href="game1.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onload="initialize()">
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="game.html">Game</a></li>
+      <li><a href="instructions.html">Instructions</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+    </ul>
+  </nav>
+  
+  <h1 id="nameOfGame">
+    🌊🐟GUESS THE NUMBER🐟🌊
+  </h1>
+  <div class="column1">
+
+    <strong>
+      <p id="output"> Welcome !</p>
+    </strong>
+
+    <strong>
+      <p id="output2"> </p>
+    </strong>
+
+
+    <div class="input">
+      <input id="N" type="number" min="1" max="3942">
+    </div>
+
+
+    <div class="button">
+      <button onclick="userGuess()" id="guessButton"> GUESS </button>
+    </div>
+
+
+    <div class="button">
+      <button onclick="hint()" id="hint"> HINT </button>
+      <strong>
+        <p id="hintText"> </p>
+      </strong> 
+    </div>
+    
+  </div>
+
+  <div class="column">
+    <h2> THEMES </h2>
+
+    <div class="themeBox">
+      <label>
+        <img src="aquaTheme.png" class="themeIMG">
+        <br>
+        <button class="themeButton" onclick="theme(1)">Aqua</button>
+      </label>
+
+      <label>
+        <img src="autumnTheme.png" class="themeIMG">
+        <br>
+        <button class="themeButton" onclick="theme(2)">Autumn</button>
+      </label>
+
+      <label>
+        <img src="magicTheme.png" class="themeIMG">
+        <br>
+        <button class="themeButton" onclick="theme(3)">Magic</button>
+      </label>
+    </div>
+  </div>
+
+  </div>
+  <footer>(c) Author: <span> Mychaelynn Tran, Akhanali Amangeldi, Mitra Sarwari</span> </footer>
+  <script src="game.js"></script>
+</body>
+
+</html>
